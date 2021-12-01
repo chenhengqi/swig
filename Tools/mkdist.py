@@ -124,9 +124,9 @@ run_command("make", "-f", "Makefile.in", "libfiles", "srcdir=./", cwd=dirpath) =
 run_command("find", dirname, "-name", "autom4te.cache", "-exec", "rm", "-rf", "{}", ";", cwd=rootdir)
 
 # Build documentation
-print("Building html documentation")
-docpath = os.path.join(dirpath, "Doc", "Manual")
-run_command("make", "all", "clean-baks", cwd=docpath) == 0 or failed()
+# print("Building html documentation")
+# docpath = os.path.join(dirpath, "Doc", "Manual")
+# run_command("make", "all", "clean-baks", cwd=docpath) == 0 or failed()
 
 # Build the tar-ball
 run_command("tar", "-cf", dirname + ".tar", dirname, stdout=open(dirname + ".tar", "w")) == 0 or failed()
